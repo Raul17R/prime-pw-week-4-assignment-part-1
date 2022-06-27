@@ -64,7 +64,7 @@ let array = [2,3,5,6,7]
 function lastItem(array) {
     let lastNumber = array[array.length - 1];
     if (lastNumber >=0) {
-      return lastNumber;
+      return 'This is the als number ', lastNumber;
     }else{
       return 'Undefined';
     }
@@ -75,9 +75,22 @@ function lastItem(array) {
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+let arr = [2,7,8,9,1]
+value = false;
+function find( value, arr){
+  for (let index = 0; index < arr.length; index++) {
+    if (value === arr[index]) {
+      value = true;
+      return 'True';
+    }
+  }
+      if (value) {
+        return 'Value matched!', value;
+      }else{
+        return 'The value was not found';
+      }
 }
+//console.log(find(77));
 
 // ----------------------
 // Stretch Goals
