@@ -75,22 +75,22 @@ function lastItem(array) {
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-let arr = [2,7,8,9,1]
-value = false;
-function find( value, arr){
-  for (let index = 0; index < arr.length; index++) {
-    if (value === arr[index]) {
-      value = true;
-      return 'True';
+let grades = [2,7,8,9,1,1234];
+ //value = false;
+
+//flag = false;
+function find( value){
+  flag = false;
+  for (let index = 0; index < grades.length; index++) {
+    if(value === grades[index]){
+      flag = true;
+      return flag;
     }
   }
-      if (value) {
-        return 'Value matched!', value;
-      }else{
-        return 'The value was not found';
-      }
+  return flag;
 }
-//console.log(find(77));
+
+console.log(find(1234));
 
 // ----------------------
 // Stretch Goals
